@@ -4,18 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <section>
-      <form>
-        <label for="title">Title</label>
-        <input id="title" name="title" type="text" />
-
-        <label for="amount">Amount</label>
-        <input type="number" name="amount" id="amount" min="0.5" />
-
-        <label for="date">Date</label>
-        <input type="date" name="date" id="date" />
+      <form class="flex flex-col bg-violet-400 gap-6 lg:p-3 md:p-6 sm:p-1">
+        <div class="flex flex-col justify-between sm:flex-row gap-6">
+          <div class="flex flex-col gap-2">
+            <label for="title" class="text-xl font-semibold">Title</label>
+            <input
+              id="title"
+              name="title"
+              type="text"
+              class="rounded-lg shadow p-1 text-lg"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="amount" class="text-xl font-semibold">Amount</label>
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              min="0.5"
+              class="rounded-lg shadow p-1 text-lg"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="date" class="text-xl font-semibold">Date</label>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            class="rounded-lg shadow p-1 text-lg"
+          />
+        </div>
 
         <button>Add</button>
       </form>
