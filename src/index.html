@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <form>
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" />
+
+        <label for="amount">Amount</label>
+        <input type="number" name="amount" id="amount" min="0.5" />
+
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" />
+
+        <button>Add</button>
+      </form>
+    </section>
+
+    <section>
+      <header>
+        <label for="filter">Filter by year</label>
+        <select name="filter" id="filter">
+          <option value="years">All</option>
+          <option value="years">2000</option>
+          <option value="years">2001</option>
+        </select>
+      </header>
+
+      <main>
+        <section>
+          <time datetime="yyyy-dd-mm">
+            <div>Month</div>
+            <div>year</div>
+            <div>date</div></time
+          >
+
+          <h2 aria-label="expense title">new car</h2>
+          <p aria-label="price"><span>$</span>9446.8</p>
+        </section>
+        <section>
+          <time datetime="yyyy-dd-mm">
+            <div>Month</div>
+            <div>year</div>
+            <div>date</div></time
+          >
+
+          <h2 aria-label="expense title">new car</h2>
+          <p aria-label="price"><span>$</span>9446.8</p>
+        </section>
+        <section>
+          <time datetime="yyyy-dd-mm">
+            <div>Month</div>
+            <div>year</div>
+            <div>date</div></time
+          >
+
+          <h2 aria-label="expense title">new car</h2>
+          <p aria-label="price"><span>$</span>9446.8</p>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>

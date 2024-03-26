@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# compiled taiwind css
+/src/index.css
+
 # testing
 /coverage
 
