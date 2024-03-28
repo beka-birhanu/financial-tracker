@@ -1,9 +1,13 @@
 import "../../index.css";
 
-function FormButton(props) {
+function FormInput(props) {
+  function valueChangeHandler(event) {
+    props.onChange(event.target.value);
+  }
+
   return (
-    <div class={`flex flex-col sm:w-2/4 gap-2 ${props.additionalClass}`}>
-      <label for={props.lable} class="text-xl font-semibold pl-1">
+    <div className={`flex flex-col sm:w-2/4 gap-2 ${props.additionalClass}`}>
+      <label htmlFor={props.lable} className="text-xl font-semibold pl-1">
         {props.label}
       </label>
 
@@ -11,10 +15,15 @@ function FormButton(props) {
         id={props.label}
         name={props.label}
         type={props.type}
-        class="rounded-lg shadow p-2 text-lg hover:shadow-lg transition duration-300 ease-in-out"
+        required={true}
+        value={props.value}
+        min={props.type === "number" ? "0.01" : undefined}
+        step={props.type === "number" ? "0.01" : undefined}
+        className="rounded-lg shadow p-2 text-lg hover:shadow-lg transition duration-300 ease-in-out"
+        onChange={valueChangeHandler}
       />
     </div>
   );
 }
 
-export default FormButton;
+export default FormInput;

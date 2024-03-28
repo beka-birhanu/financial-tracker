@@ -1,15 +1,25 @@
 import "../../index.css";
 
 function Filter(props) {
+  function filterChangeHandler(event) {
+    props.onSelect(+event.target.value);
+  }
+
+  const years = props.years;
+
   return (
     <select
       name={props.name}
       id={props.id}
-      class="text-black rounded-lg p-1 px-8"
+      className="text-black rounded-lg p-1 px-8"
+      onChange={filterChangeHandler}
     >
-      <option value="years">All</option>
-      <option value="years">2001</option>
-      <option value="years">2000</option>
+      <option value={0}>All</option>
+      {years.map((year) => (
+        <option value={year} key={year}>
+          {year}
+        </option>
+      ))}
     </select>
   );
 }

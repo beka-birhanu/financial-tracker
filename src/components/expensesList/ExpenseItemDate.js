@@ -1,14 +1,18 @@
 import "../../index.css";
 
-function ExpenseItemDate() {
+function ExpenseItemDate(props) {
+  const year = props.date.getFullYear();
+  const month = props.date.toLocaleString("default", { month: "short" });
+  const date = props.date.getDate();
+
   return (
     <time
-      datetime="yyyy-dd-mm"
-      class="border py-2 px-6 rounded-2xl bg-stone-800"
+      dateTime="yyyy-dd-mm"
+      className="border py-2 px-6 rounded-2xl bg-stone-800"
     >
-      <div class="text-sm font-bold text-center">March</div>
-      <div class="text-sm text-center">2024</div>
-      <div class="text-2xl font-extrabold text-center">27</div>
+      <div className="text-sm font-bold text-center">{month}</div>
+      <div className="text-sm text-center">{year}</div>
+      <div className="text-2xl font-extrabold text-center">{date}</div>
     </time>
   );
 }

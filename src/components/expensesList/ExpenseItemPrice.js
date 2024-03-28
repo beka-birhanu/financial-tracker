@@ -1,12 +1,13 @@
 import "../../index.css";
 
-function ExpenseItemPrice() {
+function ExpenseItemPrice(props) {
   return (
     <p
       aria-label="price"
-      class="block text-xl font-bold py-2 px-3 border rounded-xl bg-purple-950"
+      className="block text-xl font-bold py-2 px-3 border rounded-xl bg-purple-950"
     >
-      <span>$</span>9446.8
+      <span>$</span>
+      {props.price}
     </p>
   );
 }

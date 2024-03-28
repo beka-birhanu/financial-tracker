@@ -2,17 +2,17 @@ import "../../index.css";
 import ExpenseItemDate from "./ExpenseItemDate";
 import ExpenseItemPrice from "./ExpenseItemPrice";
 
-function ExpenseItem() {
+function ExpenseItem(props) {
   return (
-    <section class="flex justify-between items-center bg-neutral-600 p-2 rounded-2xl hover:scale-105 transition duration-300 ease-in-out shadow">
-      <div class="flex gap-5 items-center">
-        <ExpenseItemDate></ExpenseItemDate>
+    <section className="flex justify-between items-center bg-neutral-600 p-2 rounded-2xl hover:scale-105 transition duration-300 ease-in-out shadow">
+      <div className="flex gap-5 items-center">
+        <ExpenseItemDate date={props.date}></ExpenseItemDate>
 
-        <h2 aria-label="expense title" class="text-xl font-bold">
-          new car
+        <h2 aria-label="expense title" className="text-xl font-bold">
+          {props.title}
         </h2>
       </div>
-      <ExpenseItemPrice></ExpenseItemPrice>
+      <ExpenseItemPrice price={props.price}></ExpenseItemPrice>
     </section>
   );
 }
